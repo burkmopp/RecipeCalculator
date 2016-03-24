@@ -201,6 +201,23 @@ function recipeCalc (){
 	    $(".current_reciper").html(("Meat x5, Dried Fish x4, Poultry x4, Oatmeal x2").replace(/\d+/g, digit => digit * num));
 	    break;
 			
+      //Special Dishes
+	  case "Calpheon Special":
+	    $(".current_reciper").html(("Meat x6, Onion x1, Pepper x2, Salt x2").replace(/\d+/g, digit => digit * num) + "<br><i>And it will give: Defense +5, Max HP +100, HP Regen +5 for 90 minutes</i>");
+	    break;
+	  case "Serendia Special":
+	    $(".current_reciper").html(("Ham Sandwich x1, Beehive Cookie x1, Boiled Bird Eggs x2, Fruit Wine x2, Meat Pie x1").replace(/\d+/g, digit => digit * num)  + "<br><i>And it will give: Damage +5, Critical Chance +5%, Accuracy +10 for 90 minutes</i>");
+	    break;
+		case "Balenos Special":
+	    $(".current_reciper").html(("Cheese Gratin x1, Meat Croquette x1, Smoked Fish Steak x1, Beer x2, Stir-Fried Vegetables x2").replace(/\d+/g, digit => digit * num)  + "<br><i>And it will give: Movement Speed +2, Fishing Speed +2, Gathering Speed +2 for 90 minutes</i>");
+	    break;
+		case "Mediah Special":
+			$(".current_reciper").html(("Dark Pudding x1, Oatmeal x1, Exotic Herbal Wine x2, Grilled Sausage x2, Lean Meat Salad x1").replace(/\d+/g, digit => digit * num)  + "<br><i>And it will give: Damage +5, Attack Speed +1, Cast Speed +1 for 90 minutes</i>");
+			break;
+    case "Knight Combat Rations":
+			$(".current_reciper").html(("Dark Pudding x1, Ham Sandwich x1, Fruit Wine x1, Meat Croquette x1").replace(/\d+/g, digit => digit * num)  + "<br><i>And it will give: Damage +5, Damage against human race +5, Defense +5 for 90 minutes</i>");
+			break;
+      
 		default: 
 				  $(".current_reciper").html($("#recipe").val());
 	}
